@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Jay Martinez</title>
+    <link rel="icon" type="image/gif" href="images/jcali.jpg">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+
+    <div class="background">
+      
+      <div class="nav">
+        <a class="a" href="#">HOME</a>
+        <a class="b" href="#">ABOUT ME</a>
+        <a class="c" href="#">PROJECTS</a>
+        <a class="d" href="#">CONTACT ME</a>
+      </div>
+      <div class="content">
+      	<div class="home">
+      		<h1>Jay Martinez</h1>
+      		<h3>Full Stack Developer</h3>
+      	</div>
+      </div>
+      <div class="aboutme">
+      	<p>Welcome to my portfolio webpage,<br>I am a passionate developer that is proficient in JavaScript and many JS libraries, I also enjoy working with back end technologies like node.js.<br>For database I like to use MongoDB and MySQL. Please be sure to check out my projects that are hosted on Heroku and GitHub.</p>
+		<div>
+			<img src="images/jay.jpg" class="pro-pic">
+		</div>
+	 </div>
+
+      <div class="projects">
+        <div class="row">
+          <h1 class="proj-head">   Hello, Here are my projects and activities located in my Github profile</h1>
+        </div>
+        <div class="image">
+          <a href="https://github.com/jaymar14"><img style="width: 150px; height: 100px;" src="images/github-128.png" class="social" alt="GitHub" /></a>
+          <h3>GitHub</h3>
+        </div>
+        <div class="image">
+          <a href="https://jaymar14.github.io/concierge"><img style="width: 150px; height: 100px;" src="images/con.jpg" /></a>
+          <h3>Concierge</h3>
+        </div>
+        <div class="image">
+          <a href="https://github.com/jaymar14/bamazon"><img style="width: 150px; height: 100px;" src="images/box.png"/></a>
+          <h3>Bamazon</h3>
+        </div>
+        <div class="image">
+          <a href="https://jaymar14.github.io/Hangman-Game/"><img style="width: 150px; height: 100px;" src="images/hangman.png"/></a>
+          <h3>Hangman Game</h3>
+        </div>
+        <div class="image">
+          <a href="https://jaymar14.github.io/TriviaGame"><img style="width: 150px; height: 100px;" src="images/trivia.jpg"/></a>
+          <h3>Trivia Game</h3>
+        </div>
+        <div class="image">
+          <a href="https://agile-lake-32560.herokuapp.com/"><img style="width: 150px; height: 100px;" src="images/friend.png"/></a>
+          <h3>Friend Finder</h3>
+        </div>
+      </div>
+
+
+      <div class="contactme">
+      		<div class="row">
+      			<h1 class="connect">Let's connect, I would like to hear from you</h1><br>
+      		</div>
+      		<div class="row">	
+                <a href="mailto:jay.martinez7@yahoo.com" class="fa fa-yahoo"></a>
+               <a href="http://www.linkedin.com/in/jaymartinez14" class="fa fa-linkedin"></a>
+                <a href="mailto:jjmartinez10@google.com" class="fa fa-google"></a>
+                <a href="https://twitter.com/Jaymar_14" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/jaymar14/" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+      	</div>
+      	
+      </div>
+</div>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(this).click(function() {
+          var selected = $(this);
+          $(this).removeClass('active');
+          $(selected).addClass('active');
+        });
+
+        var $a = $('.a');
+          $b = $('.b');
+          $c = $('.c');
+          $d = $('.d');
+          $home = $('.home');
+          $aboutme = $('.aboutme');
+          $projects = $('.projects');
+          $contactme = $('.contactme');
+
+        $a.click(function() {
+          $home.fadeIn();
+          $aboutme.fadeOut();
+          $projects.fadeOut();
+          $contactme.fadeOut();
+        });
+        $b.click(function() {
+          $aboutme.fadeIn();
+          $projects.fadeOut();
+          $contactme.fadeOut();
+          $home.fadeOut();
+        });
+        $c.click(function() {
+          $projects.fadeIn();
+          $home.fadeOut();
+          $aboutme.fadeOut();
+          $contactme.fadeOut();
+        });
+        $d.click(function() {
+          $contactme.fadeIn();
+          $home.fadeOut();
+          $projects.fadeOut();
+          $aboutme.fadeOut();
+
+        });
+
+      });
+
+    </script>
+  </body>
+
+</html>
